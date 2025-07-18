@@ -1,0 +1,6 @@
+<svg class="control-bar_button" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <circle class="control-bar_button_container" cx="24" cy="24" r="22" fill="url(#menu-gradient)" />
+  <line class="stroke_text-color" x1="16" y1="18" x2="32" y2="18" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line class="stroke_text-color" x1="16" y1="24" x2="32" y2="24" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line class="stroke_text-color" x1="16" y1="30" x2="32" y2="30" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,760 @@
+{
+  "index": [
+    {
+      "Suche": "AMOXICILLINCLAVULANSÄUREAMOCLAV",
+      "Name": "Amoxicillin/Clavulansäure",
+      "Ort": "Antibiotika - Amoxicillin/Clavulansäure",
+      "Link": "amoxicillinClavulansaeure_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "AMOXICILLIN",
+      "Name": "Amoxicillin",
+      "Ort": "Antibiotika - Amoxicillin",
+      "Link": "amoxicillin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "AMPICILLIN/SULBACTAM",
+      "Name": "Ampicillin/Sulbactam",
+      "Ort": "Antibiotika - Ampicillin/Sulbactam",
+      "Link": "ampicillinSulbactam_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "AMPICILLIN",
+      "Name": "Ampicillin",
+      "Ort": "Antibiotika - Ampicillin",
+      "Link": "ampicillin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "AMPHOTERICINBLIPOSOMAL",
+      "Name": "Amphotericin B (Liposomal)",
+      "Ort": "Antibiotika - Amphotericin B (Liposomal)",
+      "Link": "amphotericinB_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "ACICLOVIR",
+      "Name": "Aciclovir",
+      "Ort": "Antibiotika - Aciclovir",
+      "Link": "aziclovir_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "AZITHROMYCIN",
+      "Name": "Azithromycin oral",
+      "Ort": "Antibiotika - Azithromycin oral",
+      "Link": "azithromycin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "AZITHROMYCIN",
+      "Name": "Azithromycin i.v.",
+      "Ort": "Antibiotika - Azithromycin i.v.",
+      "Link": "azithromycin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CASPOFUNGIN",
+      "Name": "Caspofungin",
+      "Ort": "Antibiotika - Caspofungin",
+      "Link": "caspofungin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CEFACLOR",
+      "Name": "Cefaclor",
+      "Ort": "Antibiotika - Cefaclor",
+      "Link": "cefaclor_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CEFAZOLIN",
+      "Name": "Cefazolin",
+      "Ort": "Antibiotika - Cefazolin",
+      "Link": "cefazolin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CEFPODOXIM",
+      "Name": "Cefpodoxim",
+      "Ort": "Antibiotika - Cefpodoxim",
+      "Link": "cefpodoxim_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CEFTAZIDIM",
+      "Name": "Ceftazidim",
+      "Ort": "Antibiotika - Ceftazidim",
+      "Link": "ceftazidim_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CEFTRIAXON",
+      "Name": "Ceftriaxon",
+      "Ort": "Antibiotika - Ceftriaxon",
+      "Link": "ceftriaxon_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CEFUROXIM",
+      "Name": "Cefuroxim",
+      "Ort": "Antibiotika - Cefuroxim",
+      "Link": "cefuroxim_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CIPROFLOXACIN",
+      "Name": "Ciprofloxacin i.v.",
+      "Ort": "Antibiotika - Ciprofloxacin i.v.",
+      "Link": "ciprofloxacin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CIPROFLOXACIN",
+      "Name": "Ciprofloxacin oral",
+      "Ort": "Antibiotika - Ciprofloxacin oral",
+      "Link": "ciprofloxacin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CLARITHROMYCIN",
+      "Name": "Clarithromycin i.v.",
+      "Ort": "Antibiotika - Clarithromycin i.v.",
+      "Link": "clarithromycin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CLARITHROMYCIN",
+      "Name": "Clarithromycin oral",
+      "Ort": "Antibiotika - Clarithromycin oral",
+      "Link": "clarithromycin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CLINDAMYCIN",
+      "Name": "Clindamycin i.v.",
+      "Ort": "Antibiotika - Clindamycin i.v.",
+      "Link": "clindamycin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "CLINDAMYCIN",
+      "Name": "Clindamycin oral",
+      "Ort": "Antibiotika - Clindamycin oral",
+      "Link": "clindamycin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "COTRIMOXAZOLSULFAMETHOXAZOLTRIMETHOPRIM",
+      "Name": "Cotrimoxazol<br>(Sulfamethoxazol/Trimethoprim) i.v.",
+      "Ort": "Antibiotika - Cotrimoxazol<br>(Sulfamethoxazol/Trimethoprim) i.v.",
+      "Link": "cotrimoxazol_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "COTRIMOXAZOLSULFAMETHOXAZOLTRIMETHOPRIM",
+      "Name": "Cotrimoxazol<br>(Sulfamethoxazol/Trimethoprim) oral",
+      "Ort": "Antibiotika - Cotrimoxazol<br>(Sulfamethoxazol/Trimethoprim) oral",
+      "Link": "cotrimoxazol_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "DOXYCYCLIN",
+      "Name": "Doxycyclin i.v.",
+      "Ort": "Antibiotika - Doxycyclin i.v.",
+      "Link": "doxycyclin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "DOXYCYCLIN",
+      "Name": "Doxycyclin oral",
+      "Ort": "Antibiotika - Doxycyclin oral",
+      "Link": "doxycyclin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "ERYTHROMYCIN",
+      "Name": "Erythromycin",
+      "Ort": "Antibiotika - Erythromycin",
+      "Link": "erythromycin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "ETHAMBUTOL",
+      "Name": "Ethambutol",
+      "Ort": "Antibiotika - Ethambutol",
+      "Link": "ethambutol_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "FLUCLOXACILLIN",
+      "Name": "Flucloxacillin",
+      "Ort": "Antibiotika - Flucloxacillin",
+      "Link": "flucloxacillin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "FLUCONAZOL",
+      "Name": "Fluconazol (Diflucan) i.v.",
+      "Ort": "Antibiotika - Fluconazol (Diflucan) i.v.",
+      "Link": "fluconazol_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "FLUCONAZOL",
+      "Name": "Fluconazol (Diflucan) oral",
+      "Ort": "Antibiotika - Fluconazol (Diflucan) oral",
+      "Link": "fluconazol_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "FOSFOMYCIN",
+      "Name": "Fosfomycin i.v.",
+      "Ort": "Antibiotika - Fosfomycin i.v.",
+      "Link": "fosfomycin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "FOSFOMYCIN",
+      "Name": "Fosfomycin oral",
+      "Ort": "Antibiotika - Fosfomycin oral",
+      "Link": "fosfomycin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "GANCICLOVIR",
+      "Name": "Ganciclovir",
+      "Ort": "Antibiotika - Ganciclovir",
+      "Link": "ganciclovir_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "GENTAMICIN",
+      "Name": "Gentamicin",
+      "Ort": "Antibiotika - Gentamicin",
+      "Link": "gentamicin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "GERNEBCIN",
+      "Name": "Gernebcin",
+      "Ort": "Antibiotika - Gernebcin",
+      "Link": "gernebcin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "LEVOFLOXACIN",
+      "Name": "Levofloxacin i.v.",
+      "Ort": "Antibiotika - Levofloxacin i.v.",
+      "Link": "levofloxacin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "LEVOFLOXACIN",
+      "Name": "Levofloxacin oral",
+      "Ort": "Antibiotika - Levofloxacin oral",
+      "Link": "levofloxacin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "LINEZOLID",
+      "Name": "Linezolid i.v.",
+      "Ort": "Antibiotika - Linezolid i.v.",
+      "Link": "linezolid_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "LINEZOLID",
+      "Name": "Linezolid oral",
+      "Ort": "Antibiotika - Linezolid oral",
+      "Link": "linezolid_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "MEROPENEM",
+      "Name": "Meropenem",
+      "Ort": "Antibiotika - Meropenem",
+      "Link": "meropenem_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "METRONIDAZOL",
+      "Name": "Metronidazol i.v.",
+      "Ort": "Antibiotika - Metronidazol i.v.",
+      "Link": "metronidazol_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "METRONIDAZOL",
+      "Name": "Metronidazol oral",
+      "Ort": "Antibiotika - Metronidazol oral",
+      "Link": "metronidazol_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "NITROFURANTOIN",
+      "Name": "Nitrofurantoin",
+      "Ort": "Antibiotika - Nitrofurantoin",
+      "Link": "nitrofurantoin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "PENICILLING",
+      "Name": "Penicillin G",
+      "Ort": "Antibiotika - Penicillin G",
+      "Link": "penicillinG_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "PENICILLINV",
+      "Name": "Penicillin V",
+      "Ort": "Antibiotika - Penicillin V",
+      "Link": "penicillinV_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "PIPERACILLIN/TAZOBACTAM",
+      "Name": "Piperacillin/Tazobactam",
+      "Ort": "Antibiotika - Piperacillin/Tazobactam",
+      "Link": "piperacillinTazobactam_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "PIVMECILLINAM",
+      "Name": "Pivmecillinam",
+      "Ort": "Antibiotika - Pivmecillinam",
+      "Link": "pivmecillinam_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "RIFABUTIN",
+      "Name": "Rifabutin",
+      "Ort": "Antibiotika - Rifabutin",
+      "Link": "rifabutin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "RIFAMPICIN",
+      "Name": "Rifampicin i.v.",
+      "Ort": "Antibiotika - Rifampicin i.v.",
+      "Link": "rifampicin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "RIFAMPICIN",
+      "Name": "Rifampicin oral",
+      "Ort": "Antibiotika - Rifampicin oral",
+      "Link": "rifampicin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "TIGECYCLIN",
+      "Name": "Tigecyclin",
+      "Ort": "Antibiotika - Tigecyclin",
+      "Link": "tigecyclin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "TOBRAMYCIN",
+      "Name": "Tobramycin",
+      "Ort": "Antibiotika - Tobramycin",
+      "Link": "tobramycin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "VANCOMYCIN",
+      "Name": "Vancomycin i.v.",
+      "Ort": "Antibiotika - Vancomycin i.v.",
+      "Link": "vancomycin_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "VANCOMYCIN",
+      "Name": "Vancomycin oral",
+      "Ort": "Antibiotika - Vancomycin oral",
+      "Link": "vancomycin_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "VORICONAZOL",
+      "Name": "Voriconazol i.v.",
+      "Ort": "Antibiotika - Voriconazol i.v.",
+      "Link": "voriconazol_IV",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "VORICONAZOL",
+      "Name": "Voriconazol oral",
+      "Ort": "Antibiotika - Voriconazol oral",
+      "Link": "voriconazol_PO",
+      "Methode": "getAntibiotic"
+    },
+    {
+      "Suche": "BRONCHITIS",
+      "Name": "Bronchitis",
+      "Ort": "AB Leitfaden - Pneumologie - Akute Bronchitis und AE-COPD",
+      "Link": "AB_Guideline/Pn1.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "COPD CHRONISCH OBSTRUKTIVE LUNGENERKRANKUNG",
+      "Name": "Akut exacerbierte COPD",
+      "Ort": "AB Leitfaden - Pneumologie - Akute Bronchitis und AE-COPD",
+      "Link": "AB_Guideline/Pn1.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PNEUMONIE CAP COMMUNITY AMBULANT ERWORBENE PNEUMONIE CURB",
+      "Name": "Ambulant erworbene Pneumonie (CAP)",
+      "Ort": "AB Leitfaden - Pneumologie - CAP",
+      "Link": "AB_Guideline/Pn2.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PNEUMONIE NOSOKOMIAL ERWORBENE PNEUMONIE CURB",
+      "Name": "Nosokomiale Pneumonie (NAP)",
+      "Ort": "AB Leitfaden - Pneumologie - NAP",
+      "Link": "AB_Guideline/Pn3.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PCP VIRUSPNEUMONIE PNEUMONIE IMMUNSUPPRESSION PNEUMOCYSTIS JIROVECII",
+      "Name": "Pneumonie bei Immunsuppression inkl. PCP & Viruspneumonien",
+      "Ort": "AB Leitfaden - Pneumonie bei Immunsuppression [...]",
+      "Link": "AB_Guideline/Pn4.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "FIEBER UNKLARER HERKUNFT FUO PNEUMONIE NEUTROPENIE CHEMOTHERAPIE",
+      "Name": "Fieber unklarer Herkunft und Pneumonie bei Neutropenie nach Chemotherapie",
+      "Ort": "AB Leitfaden - Pneumologie - FUO und Pneumonie [...]",
+      "Link": "AB_Guideline/Pn5.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "TBC TUBERKULOSE MYKOBAKTERIEN",
+      "Name": "Pulmonale Tuberkulose und andere Mykobakterien",
+      "Ort": "AB Leitfaden - Pneumologie - TBC",
+      "Link": "AB_Guideline/Pn6.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "MENINGITIS BAKTERIELLE",
+      "Name": "Bakterielle Meningitis",
+      "Ort": "AB Leitfaden - Neurologie - Bakterielle Meningitis",
+      "Link": "AB_Guideline/Neuro1.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "OTITIS MEDIA",
+      "Name": "Bakterielle Meningitis bei Otitis media",
+      "Ort": "AB Leitfaden - Neurologie - Bakterielle Meningitis",
+      "Link": "AB_Guideline/Neuro1.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "SCHÄDEL HIRN TRAUMA",
+      "Name": "Meningitis nach Schädel-Hirn-Trauma",
+      "Ort": "AB Leitfaden - Neurologie - Bakterielle Meningitis",
+      "Link": "AB_Guideline/Neuro1.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "OSTEOMYELITIS HIRNABSZESS SPINALER ABSZESS",
+      "Name": "Hirnabszess, spinaler Abszess und Osteomyelitis",
+      "Ort": "AB Leitfaden - Neurologie - Hirnabszess [...]",
+      "Link": "AB_Guideline/Neuro2.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "SPONDYLODISZITIS",
+      "Name": "Spondylodiszitis",
+      "Ort": "AB Leitfaden - Neurologie - Spondylodiszitis",
+      "Link": "AB_Guideline/Neuro3.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "MENINGOKOKKENMENINGITIS CHEMOPROPHYLAXE",
+      "Name": "Chemoprophylaxe der Meningokokken-Meningitis",
+      "Ort": "AB Leitfaden - Neurologie - Chemoprophylaxe [...]",
+      "Link": "AB_Guideline/Neuro4.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "MASTOIDITIS",
+      "Name": "Mastoiditis",
+      "Ort": "AB Leitfaden - HNO-Bereich",
+      "Link": "AB_Guideline/HNO.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "OTITIS EXTERNA MALIGNA",
+      "Name": "Otitis externa maligna",
+      "Ort": "AB Leitfaden - HNO-Bereich",
+      "Link": "AB_Guideline/HNO.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "SINUSITIS",
+      "Name": "Akute und chronische bakterielle Sinusitis",
+      "Ort": "AB Leitfaden - HNO-Bereich",
+      "Link": "AB_Guideline/HNO.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "EPIGLOTTITIS",
+      "Name": "Epiglottitis",
+      "Ort": "AB Leitfaden - HNO-Bereich",
+      "Link": "AB_Guideline/HNO.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "OFFENES SCHÄDEL HIRN TRAUMA",
+      "Name": "Offenes Schädel-Hirn-Trauma",
+      "Ort": "AB Leitfaden - HNO-Bereich",
+      "Link": "AB_Guideline/HNO.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "GASTRITIS",
+      "Name": "Gastritis",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "ULCERA DUODENI",
+      "Name": "Ulcera duodeni",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PANKREATITIS NEKROTISIERENDE",
+      "Name": "Nekrotisierende Pankreatitis",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "DIVERTIKULITIS SIGMADIVERTIKULITIS",
+      "Name": "Divertikulitis",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "CHOLANGITIS",
+      "Name": "Cholangitis und Cholezystitis",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "CHOLEZYSTITIS",
+      "Name": "Cholangitis und Cholezystitis",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PSEUDOMEMBRANÖSE ENTEROCOLITIS",
+      "Name": "Pseudomembranöse Enterocolitis",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PEG",
+      "Name": "AB-Prophylaxe bei PEG-Anlage",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "ÖSOPHAGUSVARIZENBLUTUNG ÖSOPHAGUSVARIZENLIGATUR",
+      "Name": "Ösophagusvarizenblutung und -ligatur",
+      "Ort": "AB Leitfaden - Gastroenterologie",
+      "Link": "AB_Guideline/Gastro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "HARNWEGSINFEKTION SCHWANGERSCHAFT UROSEPSIS PYELONEPHRITIS KATHETER DAUERKATHETER URINKATHETER",
+      "Name": "Harnwegsinfektionen und Urosepsis",
+      "Ort": "AB Leitfaden - Niere und Harnwege",
+      "Link": "AB_Guideline/Uro.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "GELENKENDOPROTHESE TEP KNIE_TEP HÜFT_TEP KNOCHENOPERATION FRAKTUREN WEICHTEILSCHADEN BANDSCHEIBEN_OP",
+      "Name": "Perioperative Prophylaxe Unfallchirurgie",
+      "Ort": "AB Leitfaden - Chirurgie - Perioperative Prophylaxe",
+      "Link": "AB_Guideline/PeriOP.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "SECTIO CAESAREA KAISERSCHNITT HYSTEREKTOMIE MAMMA AXILLA MESH_IMPLANTATE",
+      "Name": "Perioperative Prophylaxe Gynäkologie",
+      "Ort": "AB Leitfaden - Chirurgie - Perioperative Prophylaxe",
+      "Link": "AB_Guideline/PeriOP.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "GASTREKTOMIE DICKDARM SCHRITTMACHER GEFÄ?CHIRURGIE LEBER PANKREAS ÖSOPHAGUS HERNIEN NETZEINBAU GALLENWEGE APPENDEKTOMIE",
+      "Name": "Perioperative Prophylaxe Allgemeinchirurgie",
+      "Ort": "AB Leitfaden - Chirurgie - Perioperative Prophylaxe",
+      "Link": "AB_Guideline/PeriOP.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "THORAXCHIRURGIE",
+      "Name": "Perioperative Prophylaxe Thoraxchirurgie",
+      "Ort": "AB Leitfaden - Chirurgie - Perioperative Prophylaxe",
+      "Link": "AB_Guideline/PeriOP.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PERIOPERATIVE PROPHYLAXE",
+      "Name": "Perioperative Prophylaxe",
+      "Ort": "AB Leitfaden - Chirurgie - Perioperative Prophylaxe",
+      "Link": "AB_Guideline/PeriOP.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "ERYSIPEL PHLEGMONE WEICHTEILGEWEBSINFEKTIONEN DIABETISCHER FU? NEKROTISIERENDE FASCIITIS GASBRAND",
+      "Name": "Haut- und Weichteilinfektionen",
+      "Ort": "AB Leitfaden - Chirurgie - Haut- und Weichteilinfektionen",
+      "Link": "AB_Guideline/Chi1.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PERITONITIS PERFORATION PRIMÄRE SEKUNDÄRE TERTIÄRE",
+      "Name": "Peritonitis",
+      "Ort": "AB Leitfaden - Chirurgie - Intraabdominelle Infektionen",
+      "Link": "AB_Guideline/Chi2.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PERFORATION",
+      "Name": "Intraabdominelle Infektion bei Perforation",
+      "Ort": "AB Leitfaden - Chirurgie - Intraabdominelle Infektionen",
+      "Link": "AB_Guideline/Chi2.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "HANDINFEKTIONEN PANARITIUM CUTANEUM",
+      "Name": "Handinfektionen",
+      "Ort": "AB Leitfaden - Chirurgie - Knochen- und Gelenkinfektionen",
+      "Link": "AB_Guideline/Chi3.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "OSTEOMYELITIS",
+      "Name": "Osteomyelitis",
+      "Ort": "AB Leitfaden - Chirurgie - Knochen- und Gelenkinfektionen",
+      "Link": "AB_Guideline/Chi3.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "#ARTHRITIS",
+      "Name": "Bakterielle Arthritis",
+      "Ort": "AB Leitfaden - Chirurgie - Knochen- und Gelenkinfektionen",
+      "Link": "AB_Guideline/Chi3.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "BISSVERLETZUNGEN",
+      "Name": "Bissverletzungen",
+      "Ort": "AB Leitfaden - Chirurgie - Knochen- und Gelenkinfektionen",
+      "Link": "AB_Guideline/Chi3.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "PROTHESENINFEKTIONEN",
+      "Name": "Protheseninfektionen",
+      "Ort": "AB Leitfaden - Chirurgie - Protheseninfektionen",
+      "Link": "AB_Guideline/Chi4.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "SALPINGITIS ENDOMETRITIS",
+      "Name": "Salpingitis und Endometritis",
+      "Ort": "AB Leitfaden - Gynäkologie",
+      "Link": "AB_Guideline/Gyn.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "MASTITIS",
+      "Name": "Mastitis",
+      "Ort": "AB Leitfaden - Gynäkologie",
+      "Link": "AB_Guideline/Gyn.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "VORZEITIGER BLASENSPRUNG",
+      "Name": "Vorzeitiger Blasensprung",
+      "Ort": "AB Leitfaden - Gynäkologie",
+      "Link": "AB_Guideline/Gyn.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "HYSTEREKTOMIE",
+      "Name": "AB nach Hysterektomie",
+      "Ort": "AB Leitfaden - Gynäkologie",
+      "Link": "AB_Guideline/Gyn.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "SEPSIS SEPTISCHER SCHOCK SIRS",
+      "Name": "Sepsis",
+      "Ort": "AB Leitfaden - Sepsis und sept. Schock",
+      "Link": "AB_Guideline/Sepsis.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "STAPH AUREUS STAPHYLOCOCCUS MRSA",
+      "Name": "Staph. aureus Bakteriämie",
+      "Ort": "AB Leitfaden - Staph. aureus Bakteriämie",
+      "Link": "AB_Guideline/sab.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "ENDOCARDITIS ENDOKARDITIS",
+      "Name": "Endocarditis",
+      "Ort": "AB Leitfaden - Endocarditis",
+      "Link": "AB_Guideline/endo.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "ENDOCARDITIS ENDOKARDITIS PROPHYLAXE",
+      "Name": "Endocarditis Prophylaxe",
+      "Ort": "AB Leitfaden - Endocarditis Prophylaxe",
+      "Link": "AB_Guideline/endo2.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "CANDIDA PILZINFEKTIONEN MYKOTIKA SOOR MUNDSOOR",
+      "Name": "Candida-Infektionen",
+      "Ort": "AB Leitfaden - Pilzinfektionen - Candida-Infektionen",
+      "Link": "AB_Guideline/candida.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "ASPERGILLOSE PILZINFEKTIONEN MYKOTIKA",
+      "Name": "Aspergillose",
+      "Ort": "AB Leitfaden - Pilzinfektionen - Aspergillose",
+      "Link": "AB_Guideline/aspergillose.html",
+      "Methode": "loadSite"
+    },
+    {
+      "Suche": "",
+      "Name": "",
+      "Ort": "AB Leitfaden - ",
+      "Link": "AB_Guideline/XX.html",
+      "Methode": "loadSite"
+    }
+  ]
+}

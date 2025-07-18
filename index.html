@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma"        content="no-cache">
+    <meta http-equiv="Expires"       content="0">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel='shortcut icon' type='image/x-icon' href='resources/thumbnails/favicon.ico'>
+    <link rel="apple-touch-icon" sizes="120x120" href="resources/thumbnails/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resources/thumbnails/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/thumbnails/apple-touch-icon-180x180.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <title>App-Test</title>
+
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute; visibility: hidden;" aria-hidden="true">
+    <defs>
+        <linearGradient class="control-bar_button_gradient" id="menu-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"/>
+            <stop offset="100%"/>
+        </linearGradient>
+
+        <linearGradient id="fragment_stroke_gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%"/>
+            <stop offset="100%"/>
+        </linearGradient>
+
+    </defs>
+</svg>
+
+
+<div class="app-container">
+    <header class="control-bar">
+
+        <div id="menu_button">
+            <svg class="control-bar_button" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <circle class="control-bar_button_container" cx="24" cy="24" r="22" fill="url(#menu-gradient)"/>
+                <line class="stroke_text-color" x1="16" y1="18" x2="32" y2="18" stroke="#ffffff" stroke-width="3"
+                      stroke-linecap="round"/>
+                <line class="stroke_text-color" x1="16" y1="24" x2="32" y2="24" stroke="#ffffff" stroke-width="3"
+                      stroke-linecap="round"/>
+                <line class="stroke_text-color" x1="16" y1="30" x2="32" y2="30" stroke="#ffffff" stroke-width="3"
+                      stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div></div>
+
+        <div>
+            <svg class="control-bar_button" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient class="control-bar_button_gradient" id="search-gradient" x1="100%" y1="0%" x2="0%"
+                                    y2="100%">
+                        <stop offset="0%"/>
+                        <stop offset="100%"/>
+                    </linearGradient>
+                </defs>
+                <!-- Circular background with gradient -->
+                <circle class="control-bar_button_container" cx="24" cy="24" r="22" fill="url(#search-gradient)"/>
+                <!-- The lens of the magnifying glass -->
+                <circle class="stroke_text-color" cx="20" cy="20" r="8" stroke="#ffffff" stroke-width="3" fill="none"/>
+                <!-- The handle of the magnifying glass -->
+                <line class="stroke_text-color" x1="27" y1="27" x2="34" y2="34" stroke="#ffffff" stroke-width="3"
+                      stroke-linecap="round"/>
+            </svg>
+        </div>
+    </header>
+
+
+    <app-content class="app-content">
+        <div class="page">
+        </div>
+        <div id="loader"></div>
+        <div id="overlay"></div>
+        <div id="popup"></div>
+        <div id="navMenu">
+            <app-link title="Einstellungen" href="settings.html" type="main_snippet"></app-link>
+            <hr>
+            <app-link title="Startseite" href="home.html" type="main_snippet"></app-link>
+            <hr>
+            <app-link title="AB-Guideline" href="inhaltsverzeichnis.html" type="ab_snippet"></app-link>
+            <hr>
+            <app-link title="Versions Logbuch" href="changelog.html" type="main_snippet"></app-link>
+        </div>
+    </app-content>
+
+
+        <footer class="control-bar">
+
+            <div id="back-button">
+                <svg class="control-bar_button" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient class="control-bar_button_gradient" id="back-gradient" x1="0%" y1="100%"
+                                        x2="100%" y2="0%">
+                            <stop offset="0%"/>
+                            <stop offset="100%"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Circular background with gradient -->
+                    <circle class="control-bar_button_container" cx="24" cy="24" r="22" fill="url(#back-gradient)"/>
+                    <!-- Horizontal line for the arrow shaft -->
+                    <line class="stroke_text-color" x1="32" y1="24" x2="14" y2="24" stroke="#ffffff" stroke-width="3"
+                          stroke-linecap="round"/>
+                    <!-- Upper diagonal line forming the arrowhead -->
+                    <line class="stroke_text-color" x1="14" y1="24" x2="22" y2="16" stroke="#ffffff" stroke-width="3"
+                          stroke-linecap="round"/>
+                    <!-- Lower diagonal line forming the arrowhead -->
+                    <line class="stroke_text-color" x1="14" y1="24" x2="22" y2="32" stroke="#ffffff" stroke-width="3"
+                          stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div id="home-button">
+                <svg class="control-bar_button" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient class="control-bar_button_gradient" id="home-gradient" x1="50%" y1="100%"
+                                        x2="50%" y2="0%">
+                            <stop offset="0%"/>
+                            <stop offset="100%"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Circular background with gradient -->
+                    <circle class="control-bar_button_container" cx="24" cy="24" r="22" fill="url(#home-gradient)"/>
+                    <!-- House icon: Roof -->
+                    <polygon class="fill_text-color" points="12,24 24,12 36,24" fill="#ffffff"/>
+                    <!-- House icon: Body -->
+                    <rect class="fill_text-color" x="16" y="24" width="16" height="10" fill="#ffffff"/>
+                    <!-- Optional door detail -->
+                    <rect class="fill_primary" x="22" y="28" width="4" height="6" fill="#0077b6"/>
+                </svg>
+            </div>
+
+            <div id="developer"></div>
+
+        </footer>
+</div>
+
+<script type="text/javascript" src="scripts/swipedEvents.js"></script>
+<script type="module" src="scripts/main.mjs"></script>
+</body>
+</html>
+

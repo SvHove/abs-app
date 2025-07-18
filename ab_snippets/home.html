@@ -1,0 +1,61 @@
+
+
+<h1>ABS-App</h1>
+
+<button class="content-button color_randomizer">
+            <span>
+                Farbauswahl (zufällig)
+            </span>
+</button>
+
+<app-link title="Leitfaden" href="inhaltsverzeichnis.html" type="ab_snippet">
+
+</app-link>
+
+<app-dropdown title="Dropdown-Simulation">
+
+
+    <app-ab_fragment data='
+{
+    "alternatives": [
+        {
+            "title": null,
+            "antibiotic": "ampicillin_sulbactam_iv",
+            "text": "3 x 2g/1g",
+            "dosage": "3 x 2g/1g i.v. tgl.",
+            "partners": [],
+            "duration": "5(-7) Tage",
+            "comment": "Alternativen beachten!"
+        },
+        {
+            "title": "Alternative",
+            "antibiotic": "levofloxacin_po",
+            "dosage": "1-2 x 500mg p.o. tgl.",
+            "partners": [
+                {
+                    "antibiotic": "levofloxacin_iv",
+                    "dosage": "1 x 500mg i.v. tgl.",
+                    "comment": null
+                }
+            ],
+            "duration": "5(-7) Tage",
+            "comment": "Grüße aus Emden"
+        }
+    ]
+}'>
+
+    </app-ab_fragment>
+
+
+
+</app-dropdown>
+
+<app-dropdown title="Another dropdown">
+    <ul>
+        <li>Test 1</li>
+        <li>Test 2</li>
+        <li>Test 3</li>
+        <li>Test 4</li>
+        <li>Test 5</li>
+    </ul>
+</app-dropdown>

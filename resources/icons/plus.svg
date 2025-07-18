@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        /* Apply a transition to the groups so you can animate their transforms */
+        .line {
+        transition: transform 0.3s ease;
+        }
+    </style>
+    <!-- Vertical stroke group: initially vertical (rotate 0°) -->
+    <g class="line vertical" transform="translate(24,24) rotate(0)">
+        <!-- A vertical line defined from -10 to +10 along the y-axis -->
+        <line x1="0" y1="-10" x2="0" y2="10" stroke="black" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <!-- Horizontal stroke group: defined as a vertical line but pre-rotated by 90° -->
+    <g class="line horizontal" transform="translate(24,24) rotate(90)">
+        <line x1="0" y1="-10" x2="0" y2="10" stroke="black" stroke-width="4" stroke-linecap="round"/>
+    </g>
+</svg>

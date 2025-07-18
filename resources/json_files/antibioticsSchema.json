@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://SvHove.github.io/res/antibioticsSchema.json",
+  "title": "Antibiotics",
+  "description": "Validation Schema for the used antibiotic file.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "description": "Wirkstoffname (ggf. Handelsname)",
+      "type": "String"
+    },
+    "ID": {
+      "description": "ID zur einfacheren Verwendung im Code",
+      "type": "String"
+    },
+    "Standarddosis": {
+      "description": "Standarddosis, falls vorhanden.",
+      "type": "String"
+    },
+    "Oralisierung": {
+      "description": "Name des Wirkstoffes, auf den oralisiert werden kann.",
+      "type": "String"
+    },
+    "Oralisierung_Voraussetzungen": {
+      "description": "Voraussetzungen für eine Oralisierung der Therapie. Cave: Mapping muss angegeben werden.",
+      "type": "Integer"
+    },
+    "Dosisanpassung_Niereninsuffizienz": {
+      "description": "Anpassung der Dosierung bei Niereninsuffizienz",
+      "type": "String"
+    },
+    "Dosisanpassung_Dialyse": {
+      "description": "Anpassung der Dosierung bei Dialyse",
+      "type": "String"
+    },
+    "Dosisanpassung_Leberinsuffizienz": {
+      "description": "Anpassung der Dosierung bei Leberinsuffizienz",
+      "type": "String"
+    },
+    "Monitoring": {
+      "description": "Erforderliches Monitoring von Labor/EKG o.Ä., falls vorhanden",
+      "type": "String"
+    },
+    "Besonderheiten": {
+      "description": "Weitere Besonderheiten im Umgang, falls vorhanden",
+      "type": "String"
+    }
+  },
+  "required": ["Name"]
+}

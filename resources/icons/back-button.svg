@@ -1,0 +1,16 @@
+<svg width="95%" height="95%" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="backGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0077b6" />
+            <stop offset="100%" stop-color="#00aaff" />
+        </linearGradient>
+    </defs>
+    <!-- Circular background with gradient -->
+    <circle cx="24" cy="24" r="22" fill="url(#backGradient)" />
+    <!-- Horizontal line for the arrow shaft -->
+    <line x1="32" y1="24" x2="14" y2="24" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Upper diagonal line forming the arrowhead -->
+    <line x1="14" y1="24" x2="22" y2="16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Lower diagonal line forming the arrowhead -->
+    <line x1="14" y1="24" x2="22" y2="32" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>
