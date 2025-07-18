@@ -17,8 +17,8 @@ export class Link extends HTMLElement {
 
     constructor() {
         super();
-        this.#title = this.getAttribute("title");
-        this.#href = this.getAttribute("href");
+        this.#title = this.getAttribute("title") as string;
+        this.#href = this.getAttribute("href") as string;
         this.#type = this.getAttribute("type") as requestType;
         this.#navigationRequest = new navigationRequest(this.#href, this.#type);
         this.classList.add("link");

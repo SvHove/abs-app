@@ -18,6 +18,7 @@ import {
     content,
     home_request
 } from "./constants.ts";
+import {fetch_data} from "./helpers.ts";
 
 "use strict"
 
@@ -26,6 +27,9 @@ import {
 async function start() {
 
     //TODO: Write detectors for typical mobile actions.
+
+    const ANTIBIOTICS_DATA = await fetch_data("../resources/json_files/antibiotics.json");
+    const ANTIBIOTICS = JSON.parse(ANTIBIOTICS_DATA);
 
     const home_snippet = await loadSnippet(home_request);
     await content.setStartElement(home_request, home_snippet);
@@ -61,7 +65,7 @@ backButton.addEventListener("click", () => {
 homeButton.addEventListener("click", async (event) => {
     event.stopPropagation();
     if(checkForAndRemoveOverlays()) return;
-    await content.home(home_request);
+    await content.home();
 })
 
 menuButton.addEventListener("click", (event) => {

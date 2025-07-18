@@ -17,8 +17,6 @@ export const popup: HTMLElement = document.querySelector("#popup") as HTMLElemen
 export const content: Content = document.querySelector('app-content') as Content;
 export const home_request: navigationRequest = new navigationRequest("home.html", "ab_snippet");
 
-export const ANTIBIOTICS_DATA = await fetch_data("../resources/json_files/antibiotics.json");
-export const ANTIBIOTICS = JSON.parse(ANTIBIOTICS_DATA);
 
 export const sequencePrerequisites: string[] = [
     "Ausarbeitung folgt.",

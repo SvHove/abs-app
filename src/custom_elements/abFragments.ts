@@ -1,62 +1,78 @@
-import {ANTIBIOTICS} from "../json_data.ts";
+
 import {debug, convert_rem_to_pixels} from "../helpers.ts";
 import {overlay, popup, sequencePrerequisites} from "../constants.ts";
 
 
-let data_interface = {
+type AB_Data = {
     alternatives: [
         {
-            title: null,
-            antibiotic: "ampicillin_sulbactam_iv",
-            text: "3 x 2g/1g",
-            dosage: "3 x 2g/1g i.v. tgl.",
-            partners: [],
-            duration: "5(-7) Tage",
-            comment: "Alternativen beachten!"
+            title: string,
+            antibiotic: string,
+            text: string,
+            dosage: string,
+            partners: [] | undefined,
+            duration: string,
+            comment: string | undefined
         },
         {
-            title: "Alternative",
-            antibiotic: "levofloxacin_po",
-            dosage: "1-2 x 500mg p.o. tgl.",
-            partners: [
-                {
-                    antibiotic: "levofloxacin_iv",
-                    dosage: "1 x 500mg i.v. tgl.",
-                    comment: null
-                }],
-            duration: "5(-7) Tage",
-            comment: "Grüße aus Emden"
+            title: string,
+            antibiotic: string,
+            dosage: string,
+            partners: {
+                    antibiotic: string,
+                    dosage: string,
+                    comment: string | undefined
+                }[],
+            duration: string,
+            comment: string | undefined
         }
     ]
 }
 
-let antibiotic_interface = {
+type Antibiotic = {
 
-    ID: "ampicillin_iv",
-    Exclude: false,
-    Name: "Ampicillin",
-    Standarddosis: "3x 2g tgl. i.v.",
-    Sequenztherapie: "Eingeschränkt möglich:<br><br>Amoxicillin p.o., 3x 1g tgl. (BV 70-90%)<br>p.o./i.v. Serumspiegel 35-45%<br>Gleiche Wirkstoffgruppe und identisches Wirkspektrum.",
-    Sequenztherapie_Voraussetzungen: "1",
-    Dosisanpassung_Niereninsuffizienz: "<em>GFR 30-20 ml/min:</em><br>2-4 x 1-2g tgl.<br><em>GFR 20-10 ml/min:</em><br>1-4 x 1-2g tgl.<br><em>GFR <10 ml/min:</em><br>1-3 x 1-2g bis 4 x 1g tgl.",
-    Dosisanpassung_Haemodialyse: "<em>Erhaltungsdosis:</em><br>1-2 x 1-2g<br><em>+ Ersatzdosis:</em><br>1g nach Dialyse.",
-    Dosisanpassung_Leberinsuffizienz: "Keine Dosisanpassung.",
-    Besonderheiten: "MTX-Toxizität steigt, insbesondere bei eingeschränkter Nierenfunktion",
-    Monitoring: "Therapie >7-10 Tage:<br>Nierenfunktion, Blutbild (insb. Thrombozyten), ggf. INR"
-
+    ID: string,
+    Exclude: boolean,
+    Name: string,
+    Standarddosis: string,
+    Sequenztherapie: string,
+    Sequenztherapie_Voraussetzungen: number,
+    Dosisanpassung_Niereninsuffizienz: string,
+    Dosisanpassung_Haemodialyse: string,
+    Dosisanpassung_Leberinsuffizienz: string,
+    Besonderheiten: string,
+    Monitoring: string
 }
 
 export class AbFragment extends HTMLElement {
 
-    #setupFinished;
+    #setupFinished: boolean;
+    #content_area: HTMLDivElement;
+    #arrow_left_area: HTMLDivElement;
+    #arrow_right_area: HTMLDivElement;
+    #alternatives_length: number;
+    #current_display_id: number;
+    #svg_left:  SVGSVGElement;
+    #svg_right:  SVGSVGElement;
+    #data: AB_Data;
+    #containers: HTMLDivElement[];
+    #container_holder: HTMLDivElement;
 
     constructor() {
         super();
-        this.get_data();
+        this.#data = JSON.parse(this.getAttribute("data") as string);
+        this.#content_area = document.createElement("div");
+        this.#arrow_left_area = document.createElement("div");
+        this.#arrow_right_area = document.createElement("div");
+        this.#svg_left = this.generate_arrow_svg();
+        this.#svg_right = this.generate_arrow_svg();
+        this.#setupFinished = false;
+        this.#containers = [];
+        this.#container_holder = document.createElement("div");
         this.set_up_containers();
         this.set_up_arrows();
-        this.alternatives_length = this.data.alternatives.length;
-        this.current_display_id = 0;
+        this.#alternatives_length = this.#data.alternatives.length;
+        this.#current_display_id = 0;
         this.generate_antibiotics();
         this.set_arrow_right_listener();
         this.set_arrow_left_listener();
@@ -68,59 +84,55 @@ export class AbFragment extends HTMLElement {
 
     set_height() {
         // Dynamically setting height, adding a margin of 0.5rem.
-        this.style.height = (this.containers[this.current_display_id].firstElementChild.clientHeight + convert_rem_to_pixels(0.5)) + "px";
+        this.style.height = (this.#containers[this.#current_display_id].firstElementChild.clientHeight + convert_rem_to_pixels(0.5)) + "px";
     }
 
     set_arrow_right_listener() {
-        if(this.arrow_right_area.hasClickListener) return;
-        this.arrow_right_area.addEventListener('click', () => {
-            const current_container = this.containers[this.current_display_id];
+        if(this.#arrow_right_area.hasClickListener) return;
+        this.#arrow_right_area.addEventListener('click', () => {
+            const current_container = this.#containers[this.#current_display_id];
             current_container.classList.add('hide-left');
 
-            this.arrow_left_area.classList.remove('hidden');
+            this.#arrow_left_area.classList.remove('hidden');
 
 
-            this.current_display_id += 1;
-            this.containers[this.current_display_id].classList.remove('hide-right');
+            this.#current_display_id += 1;
+            this.#containers[this.#current_display_id].classList.remove('hide-right');
             this.set_height();
 
-            if(this.current_display_id === (this.containers.length - 1)) {
-                this.arrow_right_area.classList.add('hidden');
+            if(this.#current_display_id === (this.#containers.length - 1)) {
+                this.#arrow_right_area.classList.add('hidden');
             }
-            this.arrow_right_area.hasClickListener = true;
+            this.#arrow_right_area.hasClickListener = true;
         });
     }
 
     set_arrow_left_listener() {
-        this.arrow_left_area.addEventListener('click', () => {
-            const current_container = this.containers[this.current_display_id];
+        this.#arrow_left_area.addEventListener('click', () => {
+            const current_container = this.#containers[this.#current_display_id];
             current_container.classList.add('hide-right');
 
-            this.arrow_right_area.classList.remove('hidden');
+            this.#arrow_right_area.classList.remove('hidden');
 
-            this.current_display_id -= 1;
-            this.containers[this.current_display_id].classList.remove('hide-left');
+            this.#current_display_id -= 1;
+            this.#containers[this.#current_display_id].classList.remove('hide-left');
             this.set_height();
 
-            if(this.current_display_id === 0) {
-                this.arrow_left_area.classList.add('hidden');
+            if(this.#current_display_id === 0) {
+                this.#arrow_left_area.classList.add('hidden');
             }
-
         });
     }
 
     set_up_containers() {
-        this.content_area = document.createElement("div");
-        this.content_area.classList.add("ab-fragment_content");
-        this.arrow_left_area = document.createElement("div");
-        this.arrow_left_area.classList.add("ab-fragment_arrow-left-area");
-        this.arrow_left_area.classList.add("hidden");
-        this.arrow_right_area = document.createElement("div");
-        this.arrow_right_area.classList.add("ab-fragment_arrow-right-area");
-        this.arrow_right_area.classList.add("hidden");
-        this.appendChild(this.arrow_left_area);
-        this.appendChild(this.content_area);
-        this.appendChild(this.arrow_right_area);
+        this.#content_area.classList.add("ab-fragment_content");
+        this.#arrow_left_area.classList.add("ab-fragment_arrow-left-area");
+        this.#arrow_left_area.classList.add("hidden");
+        this.#arrow_right_area.classList.add("ab-fragment_arrow-right-area");
+        this.#arrow_right_area.classList.add("hidden");
+        this.appendChild(this.#arrow_left_area);
+        this.appendChild(this.#content_area);
+        this.appendChild(this.#arrow_right_area);
     }
 
     set_up_arrows() {
@@ -130,15 +142,14 @@ export class AbFragment extends HTMLElement {
     }
 
     set_up_left_arrow() {
-        this.svg_left = this.generate_arrow_svg();
-        this.arrow_left_area.appendChild(this.svg_left);
-        this.arrow_left_area.hasClickListener = false;
+
+        this.#arrow_left_area.appendChild(this.#svg_left);
+        this.#arrow_left_area.hasClickListener = false;
     }
 
     set_up_right_arrow() {
-        this.svg_right = this.generate_arrow_svg();
-        this.arrow_right_area.appendChild(this.svg_right);
-        this.arrow_right_area.hasClickListener = false;
+        this.#arrow_right_area.appendChild(this.#svg_right);
+        this.#arrow_right_area.hasClickListener = false;
     }
 
     generate_arrow_svg() {
@@ -166,28 +177,22 @@ export class AbFragment extends HTMLElement {
         return svg;
     }
 
-    get_data() {
-        this.data = JSON.parse(this.getAttribute("data"));
-    }
-
     generate_antibiotics() {
-        this.container_holder = document.createElement("div");
-        this.container_holder.classList.add("ab-fragment_alternative_holder");
-        this.containers = [];
+        this.#container_holder.classList.add("ab-fragment_alternative_holder");
 
-        if (this.alternatives_length > 1) {
-            this.arrow_right_area.classList.remove("hidden");
+        if (this.#alternatives_length > 1) {
+            this.#arrow_right_area.classList.remove("hidden");
         }
 
-        for(let alternative of this.data.alternatives) {
+        for(let alternative of this.#data.alternatives) {
             const container = new AlternativeContainer(alternative).container;
             container.classList.add("hide-right");
-            this.containers.push(container);
-            this.container_holder.appendChild(container);
+            this.#containers.push(container);
+            this.#container_holder.appendChild(container);
         }
 
-        this.content_area.appendChild(this.container_holder);
-        this.containers[0].classList.remove("hide-right");
+        this.#content_area.appendChild(this.#container_holder);
+        this.#containers[0].classList.remove("hide-right");
     }
 }
 
@@ -199,21 +204,22 @@ class AlternativeContainer {
 
     #container;
     #lower_container;
+    #data: AB_Data;
 
-    constructor(single_alternative_data) {
+    constructor(single_alternative_data: AB_Data) {
         this.#container = document.createElement("div");
         this.#container.classList.add("ab-fragment_alternative_upper_container");
         this.#lower_container = document.createElement("div");
         this.#lower_container.classList.add("ab-fragment_alternative_lower_container");
         this.#container.appendChild(this.#lower_container)
-        this.data = single_alternative_data;
+        this.#data = single_alternative_data;
 
-        this.add_title(this.data);
-        this.add_button(this.data);
-        this.add_dosage(this.data);
-        this.add_partners(this.data);
-        this.add_duration(this.data);
-        this.add_comment(this.data);
+        this.add_title(this.#data);
+        this.add_button(this.#data);
+        this.add_dosage(this.#data);
+        this.add_partners(this.#data);
+        this.add_duration(this.#data);
+        this.add_comment(this.#data);
     }
 
     get container() {
@@ -224,7 +230,7 @@ class AlternativeContainer {
         return this.#lower_container;
     }
 
-    add_duration(single_alternative_data) {
+    add_duration(single_alternative_data: AB_Data) {
         const duration_paragraph = document.createElement("p");
         duration_paragraph.innerHTML = '<strong>Therapiedauer:</strong><br>'
         duration_paragraph.innerHTML += single_alternative_data.duration;
